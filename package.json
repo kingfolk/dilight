@@ -11,9 +11,13 @@
     "test:single": "ng test lib --watch false",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix --type-check && ng lint lib --fix --type-check",
-    "e2e": "ng e2e"
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "publish:lib": "node scripts/prepublish && npm publish ./publish"
   },
   "private": true,
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
     "@angular/animations": "~7.0.0",
     "@angular/common": "~7.0.0",
@@ -40,6 +44,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
+    "conventional-changelog-cli": "^2.0.12",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.0.0",
