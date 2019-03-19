@@ -1,5 +1,5 @@
 ## Install
 
 ```bash
-npm install dilight
+npm install dilight.js
 ```

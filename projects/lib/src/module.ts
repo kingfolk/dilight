@@ -3,7 +3,7 @@ import { InjectMeta } from './inject-meta';
 import { InjectableConstructor } from './injectable';
 
 export class InjectorParams {
-  providers: any[];
+  providers: Type<any>[];
 }
 
 /**
