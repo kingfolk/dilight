@@ -1,6 +1,6 @@
 # Dilight
 
-A simplistic and lightweight dependency injection library for typescript.
+A simplistic and lightweight dependency injection library for typescript. http://dilight.surge.sh/
  
 ## Install
 
@@ -17,6 +17,6 @@ npm install dilight.js
 
 ## Inspired by
 
-[Angular](https://github.com/angular/angular)
-[Guice](https://github.com/google/guice)
-[Inversify](https://github.com/inversify/InversifyJS)
+- [Angular](https://github.com/angular/angular)
+- [Guice](https://github.com/google/guice)
+- [Inversify](https://github.com/inversify/InversifyJS)
