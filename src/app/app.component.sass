@@ -1,0 +1,33 @@
+\:host
+  height: 100vh
+  display: block
+  color: #33333d
+
+.cover
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  height: 100%
+  border-bottom: 1px solid #eee
+
+  &-title
+    font: 150px 'Courier'
+
+  &-subtitle
+    margin-top: 2rem
+
+.section
+  display: block
+  margin: auto
+  width: 750px
+  margin-bottom: 2rem
+
+  &:not:last-of-type
+    border-bottom: 1px solid #eee
+
+::ng-deep code:not([class*="language-"])
+  background: #f5f5f5
+  border-radius: 2px
+  color: #dd4a68
+  padding: 2px 4px
