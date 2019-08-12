@@ -1,0 +1,21 @@
+name: CI
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.8
+      - name: Install dependencies
+        run: npm install
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build:lib && npm run build:prod
+      - name: Test
+        run: npm test -- --configuration=ci

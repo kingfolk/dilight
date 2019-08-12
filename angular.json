@@ -158,6 +158,13 @@
             "main": "projects/lib/test.ts",
             "tsConfig": "projects/lib/tsconfig.spec.json",
             "karmaConfig": "projects/lib/karma.conf.js"
+          },
+          "configurations": {
+            "ci": {
+              "watch": false,
+              "progress": false,
+              "browsers": "ChromeHeadlessCI"
+            }
           }
         },
         "lint": {
