@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  push:
+    tags: '*'
+
+jobs:
+  release:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.8
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+          npm run build:lib
+          npm run publish:lib
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Upload artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: npm-artifacts
+          path: publish
